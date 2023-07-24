@@ -9,6 +9,10 @@ export const NavbarActions = () => {
 
   useEffect(() => {
     setIsMounted(true)
+
+    return () => {
+      setIsMounted(false);
+    }
   }, []);
 
   if(!isMounted) {
